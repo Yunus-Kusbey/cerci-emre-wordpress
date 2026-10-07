@@ -1,0 +1,75 @@
+/*
+ * WooCommerce Custom Styles for Çerci Emre
+ * Note: Most WooCommerce overrides are located in the main style.css file.
+ * This file is enqueued specifically when WooCommerce is active to handle
+ * specific layout overrides that might conflict otherwise.
+ */
+
+/* Fix for product gallery layout on single product pages */
+.woocommerce-product-gallery {
+    position: relative;
+    margin-bottom: var(--ce-space-3xl);
+}
+
+.woocommerce-product-gallery .flex-control-thumbs {
+    display: flex;
+    gap: var(--ce-space-sm);
+    margin-top: var(--ce-space-sm);
+    padding: 0;
+    list-style: none;
+}
+
+.woocommerce-product-gallery .flex-control-thumbs li {
+    width: 25%;
+    cursor: pointer;
+}
+
+.woocommerce-product-gallery .flex-control-thumbs li img {
+    border-radius: var(--ce-radius-sm);
+    border: 2px solid transparent;
+    transition: border-color var(--ce-transition-fast);
+}
+
+.woocommerce-product-gallery .flex-control-thumbs li img.flex-active,
+.woocommerce-product-gallery .flex-control-thumbs li img:hover {
+    border-color: var(--ce-gold);
+}
+
+/* Ensure related products grid looks good */
+.related.products {
+    margin-top: var(--ce-space-4xl);
+    padding-top: var(--ce-space-4xl);
+    border-top: 1px solid rgba(200, 164, 92, 0.1);
+}
+
+.related.products > h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--ce-space-2xl);
+    text-align: center;
+}
+
+/* WooCommerce Messages */
+.woocommerce-message, 
+.woocommerce-error, 
+.woocommerce-info {
+    padding: var(--ce-space-md) var(--ce-space-lg);
+    margin-bottom: var(--ce-space-2xl);
+    background-color: var(--ce-dark);
+    border-top: 3px solid var(--ce-gold);
+    border-radius: var(--ce-radius-sm);
+    color: var(--ce-white);
+    display: flex;
+    align-items: center;
+    gap: var(--ce-space-md);
+    box-shadow: var(--ce-shadow-sm);
+}
+
+.woocommerce-error {
+    border-top-color: #dc3545;
+}
+
+.woocommerce-message .button,
+.woocommerce-error .button,
+.woocommerce-info .button {
+    margin-left: auto;
+}
